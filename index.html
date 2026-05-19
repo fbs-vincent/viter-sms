@@ -10,6 +10,13 @@
     <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>School Management System</title>
+    <script>
+      // Restore the path from the query param on load
+      const redirect = new URLSearchParams(window.location.search).get("p");
+      if (redirect) {
+        window.history.replaceState(null, "", redirect);
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
